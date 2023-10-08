@@ -11,18 +11,16 @@
         <h3>Autor: Arkadiusz Wołk</h3>
         <h4>Wszelkie prawa zastrzeżone</h4>
     </div>
+
+    {% for post in posts %}
     <div>
-        <p>To jest akapit</p>
-        <em>To jest wyróżniony tekst</em><br>
-        <strong>To jest pogrubiony tekst</strong>
-        <a href="https://strefakursow.pl">LINK</a>
+        <p>Opublikowany: {{ post.publish_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <em>{{ post.text|linebreaksbr }}</em>
     </div>
+    {% endfor %}
     <div>
-        <ul>
-            <li>Element listy</li>
-            <li>Element listy</li>
-            <li>Element listy</li>
-        </ul>
+
     </div>
 </body>
 </html>
